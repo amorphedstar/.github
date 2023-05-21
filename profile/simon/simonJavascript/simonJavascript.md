@@ -18,7 +18,7 @@ You can view this application running here: [Example Simon JavaScript](https://s
 
 The first place we used JavaScript in Simon, allows the user to provide their name. We then store that name in the Browser's local storage cache. Once in the cache we can read the value from other html pages, or even later browser sessions on the same device.
 
-Notice the inclusion of a `onclick` call to the `login` function found in the `login.js` file. We reference the `login.js` file by including an HTML `script` element.
+Notice the inclusion of an `onclick` call to the `login` function found in the `login.js` file. We reference the `login.js` file by including an HTML `script` element.
 
 ```html
 <script src="login.js"></script>
@@ -29,7 +29,7 @@ Notice the inclusion of a `onclick` call to the `login` function found in the `l
 <button class="btn btn-primary" onclick="login()">Login</button>
 ```
 
-In the `login.js` file we handle a click on the login button by using the document object's querySelector function to get the input element's value and store it in local storage. We then redirect the browser to display the `play.html` page.
+In the `login.js` file we handle a click on the login button by using the `document` object's `querySelector` function to get the `input` element's value and store it in local storage. We then redirect the browser to display the `play.html` page.
 
 ```js
 function login() {
@@ -41,13 +41,13 @@ function login() {
 
 ### scores.js
 
-The `scores.js` reads the current high scores out of local storage and injects the values into the DOM usinng `createElement` and `appendChild` calls.
+The `scores.js` reads the current high scores out of local storage and injects the values into the DOM using `createElement` and `appendChild` calls.
 
 ### play.js
 
-This is where all the game play interactions occur. There are two classes one for `Button` and one for `Game`. The Button class handles the playing of the button's audio file, along with the change in color, when a button is pressed.
+This is where all the game play interactions occur. There are two classes: one for `Button` and one for `Game`. The `Button` class handles the playing of the button's audio file, along with the change in color, when a button is pressed.
 
-The Game class manages the current sequence that a user is supposed to duplicate. This is done with the `reset` function to clear out the sequence and add a new random button, and the `playSequence` function that plays the sequence for the user to duplicate.
+The `Game` class manages the current sequence that a user is supposed to duplicate. This is done with the `reset` function to clear out the sequence and add a new random button, and the `playSequence` function that plays the sequence for the user to duplicate.
 
 ## Study this code
 
